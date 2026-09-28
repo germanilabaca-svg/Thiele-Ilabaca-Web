@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta property="og:title" content="Thiele Ilabaca Banquetería">
+<meta property="og:description" content="Banquetería y producción de eventos en Santiago, litoral central, zona rural y montaña. Matrimonios, celebraciones y eventos corporativos de hasta 250 personas.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/fundadores-hero.jpg">
+<meta name="theme-color" content="#6b2635">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%236b2635'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23f2e7e3' text-anchor='middle'%3ETI%3C/text%3E%3C/svg%3E">
+<title>Thiele Ilabaca Banquetería</title>
+<meta name="description" content="Banquetería y producción de eventos en Santiago, litoral central, zona rural y montaña. Matrimonios, celebraciones y eventos corporativos de hasta 250 personas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --empolvado:#f2e7e3;
+  --empolvado-2:#e9d9d4;
+  --papel:#fbf6f4;
+  --vino:#6b2635;
+  --vino-2:#8a3a4a;
+  --ciruela:#2b1f23;
+  --ciruela-2:#3a2a2e;
+  --laton:#a47634;
+  --laton-claro:#d2a861;
+  --texto:#34262a;
+  --suave:#6e5c58;
+  --linea:#dcc9c3;
+  --sobre-oscuro:#f2e7e3;
+  --sobre-oscuro-suave:#c9b5b1;
+  --display:'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
+  --sans:'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --gutter:clamp(16px, 4vw, 48px);
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--empolvado);color:var(--texto);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--laton);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;color:var(--vino);font-optical-sizing:auto}
+p{margin:0}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+.label{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--laton)}
+section[id]{scroll-margin-top:72px}
+
+/* Mantel: the table-runner rule used as the recurring motif */
+.mantel{height:9px;border-block:1px solid var(--linea);position:relative;margin:0}
+.mantel::after{content:"";position:absolute;inset:3px 0;border-top:1px solid var(--linea)}
+.mantel.oscuro{border-color:rgba(242,231,227,.18)}
+.mantel.oscuro::after{border-color:rgba(242,231,227,.18)}
+
+/* Header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(242,231,227,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+.top .barra{display:flex;align-items:center;gap:24px;min-height:64px}
+.marca{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marca b{font-family:var(--display);font-weight:500;font-size:1.28rem;color:var(--vino);letter-spacing:.01em}
+.marca span{font-size:.58rem;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--suave);margin-top:5px}
+.nav{display:flex;gap:26px;margin-left:auto;font-size:.88rem;font-weight:500}
+.nav a{text-decoration:none;color:var(--suave);padding-block:6px;border-bottom:1px solid transparent;transition:color .15s,border-color .15s}
+.nav a:hover{color:var(--vino);border-color:var(--laton)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:600;font-size:.88rem;letter-spacing:.02em;text-decoration:none;padding:13px 22px;border:1px solid var(--vino);border-radius:0;cursor:pointer;transition:background .15s,color .15s}
+.btn.solido{background:var(--vino);color:var(--papel)}
+.btn.solido:hover{background:var(--vino-2);border-color:var(--vino-2)}
+.btn.linea{background:transparent;color:var(--vino)}
+.btn.linea:hover{background:var(--vino);color:var(--papel)}
+.top .btn{padding:10px 18px}
+.menu-btn{display:none;margin-left:auto;background:none;border:1px solid var(--linea);color:var(--vino);font:600 .8rem var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:9px 12px;cursor:pointer}
+[hidden]{display:none!important}
+.menu-panel{border-top:1px solid var(--linea);padding-block:12px 18px}
+.menu-panel a{display:block;text-decoration:none;color:var(--vino);font-family:var(--display);font-size:1.3rem;padding-block:8px}
+@media (max-width:900px){.nav,.top .btn{display:none}.menu-btn{display:inline-block}}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,72px);align-items:end;padding-block:clamp(36px,6vw,80px) clamp(40px,6vw,72px)}
+.hero h1{font-size:clamp(2.35rem,5.6vw,4.6rem);line-height:1.04;letter-spacing:-.012em;margin-block:18px 26px}
+.hero h1 em{font-style:italic;color:var(--vino-2)}
+.hero .bajada{font-size:1.1rem;color:var(--suave);max-width:34em}
+.hero .acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero-foto{display:grid;grid-template-rows:1fr 1fr;gap:clamp(8px,1vw,12px);align-self:stretch;min-height:560px}
+.hero-foto figure{margin:0;position:relative;overflow:hidden;min-height:0}
+.hero-foto img{width:100%;height:100%;object-fit:cover}
+.hero-foto figure:first-child img{object-position:50% 30%}
+.hero-foto figcaption{position:absolute;left:0;bottom:14px;background:var(--papel);color:var(--suave);font-size:.76rem;padding:7px 12px;max-width:85%}
+.ficha{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--linea);margin-top:40px}
+.ficha div{padding:16px 16px 0 0;border-right:1px solid var(--linea);display:flex;flex-direction:column;gap:2px}
+.ficha div + div{padding-left:16px}
+.ficha div:last-child{border-right:0}
+.ficha b{font-family:var(--display);font-weight:400;font-size:2rem;line-height:1;color:var(--vino);font-variant-numeric:lining-nums}
+.ficha span{font-size:.8rem;color:var(--suave);line-height:1.35}
+@media (max-width:860px){.hero{grid-template-columns:1fr}.hero-foto{order:-1;min-height:0;grid-template-rows:auto auto}.hero-foto figure{aspect-ratio:4/3}}
+@media (max-width:460px){.ficha b{font-size:1.55rem}.ficha div + div{padding-left:10px}.ficha div{padding-right:10px}}
+
+/* Section heads */
+.seccion{padding-block:clamp(56px,8vw,112px)}
+.cabeza{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(20px,4vw,64px);align-items:end;margin-bottom:clamp(32px,4vw,56px)}
+.cabeza h2{font-size:clamp(1.9rem,3.8vw,3.1rem);line-height:1.08;margin-top:14px}
+.cabeza p{color:var(--suave);max-width:36em}
+@media (max-width:780px){.cabeza{grid-template-columns:1fr}}
+
+/* Two tables: social / corporate */
+.dos-mesas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+.mesa{background:var(--papel);display:flex;flex-direction:column}
+.mesa img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.mesa .cuerpo{padding:clamp(22px,3vw,36px);display:flex;flex-direction:column;gap:14px;flex:1}
+.mesa h3{font-size:clamp(1.6rem,2.6vw,2.1rem)}
+.mesa p{color:var(--suave)}
+.ocasiones{list-style:none;margin:6px 0 0;padding:0;border-top:1px solid var(--linea)}
+.ocasiones li{display:flex;justify-content:space-between;gap:12px;padding-block:11px;border-bottom:1px solid var(--linea);font-size:.95rem}
+.mesa .btn{align-self:flex-start;margin-top:auto}
+.mesa .cuerpo > .btn{margin-top:14px}
+@media (max-width:820px){.dos-mesas{grid-template-columns:1fr}}
+
+/* Seasonal kitchen (dark) */
+.oscuro-bg{background:var(--ciruela);color:var(--sobre-oscuro)}
+.oscuro-bg h2,.oscuro-bg h3{color:var(--sobre-oscuro)}
+.oscuro-bg .cabeza p{color:var(--sobre-oscuro-suave)}
+.oscuro-bg .label{color:var(--laton-claro)}
+.estaciones{display:flex;gap:0;border-bottom:1px solid rgba(242,231,227,.18);overflow-x:auto;scrollbar-width:none}
+.estaciones::-webkit-scrollbar{display:none}
+.estaciones button{flex:1 0 auto;background:none;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;color:var(--sobre-oscuro-suave);font-family:var(--display);font-size:clamp(1.15rem,2vw,1.6rem);padding:14px 20px 14px 0;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:color .15s,border-color .15s}
+.estaciones button small{font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:inherit;opacity:.8}
+.estaciones button[aria-selected="true"]{color:var(--sobre-oscuro);border-color:var(--laton-claro)}
+.estaciones button:hover{color:var(--sobre-oscuro)}
+.estacion{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);padding-top:clamp(28px,4vw,48px);align-items:center}
+.estacion-foto{margin:0;display:flex;flex-direction:column;gap:10px}
+.estacion-foto img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.estacion-foto figcaption{font-size:.8rem;color:var(--sobre-oscuro-suave)}
+.estacion h3{font-size:clamp(1.9rem,3.4vw,2.8rem);font-style:italic}
+.estacion .meses{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--laton-claro);margin-top:8px}
+.productos{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;border-top:1px solid rgba(242,231,227,.18)}
+.productos li{padding-block:11px;border-bottom:1px solid rgba(242,231,227,.18);font-size:1rem}
+.estacion .nota{font-size:.85rem;color:var(--sobre-oscuro-suave);margin-top:22px;max-width:30em}
+.hoy{display:inline-block;margin-left:10px;font-family:var(--sans);font-style:normal;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;background:var(--laton-claro);color:var(--ciruela);padding:3px 8px;vertical-align:middle}
+@media (max-width:760px){.estacion{grid-template-columns:1fr}}
+
+/* Oficio strip */
+.oficio{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:clamp(10px,1.5vw,18px);margin-top:clamp(48px,6vw,80px)}
+.oficio figure{margin:0;display:flex;flex-direction:column;gap:10px}
+.oficio img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.oficio figure:first-child img{aspect-ratio:auto;height:100%;min-height:0}
+.oficio figure:first-child{grid-row:span 1}
+.oficio figcaption{font-size:.82rem;color:var(--sobre-oscuro-suave)}
+@media (max-width:760px){.oficio{grid-template-columns:1fr 1fr}.oficio figure:first-child{grid-column:1/-1}.oficio figure:first-child img{aspect-ratio:3/2;height:auto}}
+
+/* Formats */
+.formatos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2.5vw,32px)}
+.formato{display:flex;flex-direction:column;gap:14px;border-top:2px solid var(--vino);padding-top:22px}
+.formato .momento{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--laton);font-weight:600}
+.formato h3{font-size:clamp(1.8rem,2.8vw,2.4rem);line-height:1.05}
+.formato p{color:var(--suave);font-size:1rem;max-width:30em}
+@media (max-width:860px){.formatos{grid-template-columns:1fr;gap:36px}}
+
+/* Process + included */
+.proceso{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:start}
+.pasos{list-style:none;padding:0;margin:0;counter-reset:paso}
+.pasos li{counter-increment:paso;display:grid;grid-template-columns:64px minmax(0,1fr);gap:18px;padding-block:24px;border-top:1px solid var(--linea)}
+.pasos li:last-child{border-bottom:1px solid var(--linea)}
+.pasos li::before{content:counter(paso);font-family:var(--display);font-size:2.6rem;line-height:.9;color:var(--laton)}
+.pasos h3{font-size:1.45rem;margin-bottom:6px}
+.pasos p{color:var(--suave)}
+.incluye{background:var(--papel);padding:clamp(24px,3vw,36px)}
+.incluye h3{font-size:1.5rem;margin-block:10px 14px}
+.incluye ul{list-style:none;padding:0;margin:0}
+.incluye li{padding-block:12px;border-bottom:1px solid var(--linea);display:flex;flex-direction:column;gap:2px}
+.incluye li:last-child{border-bottom:0}
+.incluye li b{font-weight:600;color:var(--texto);font-size:.98rem}
+.incluye li span{font-size:.86rem;color:var(--suave)}
+@media (max-width:860px){.proceso{grid-template-columns:1fr}}
+
+/* Case: 250 guests */
+.caso{background:var(--empolvado-2)}
+.caso-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(8px,1.2vw,14px)}
+.caso-grid figure{margin:0;position:relative;overflow:hidden}
+.caso-grid img{width:100%;height:100%;object-fit:cover}
+.c1{grid-column:1/9;aspect-ratio:3/2}
+.c2{grid-column:9/13;grid-row:span 2}
+.c3{grid-column:1/5;aspect-ratio:4/3}
+.c4{grid-column:5/9;aspect-ratio:4/3}
+.caso-grid figcaption{position:absolute;left:0;bottom:0;background:rgba(43,31,35,.82);color:var(--sobre-oscuro);font-size:.76rem;padding:7px 12px}
+.caso-datos{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:22px;font-size:.9rem;color:var(--suave)}
+.caso-datos b{color:var(--vino);font-weight:600}
+@media (max-width:760px){.c1{grid-column:1/-1}.c2{grid-column:1/-1;grid-row:auto;aspect-ratio:4/5}.c3{grid-column:1/7}.c4{grid-column:7/13}}
+
+
+/* Own events gallery */
+.galeria{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.4vw,16px);grid-auto-flow:dense}
+.galeria figure{margin:0;position:relative}
+.galeria .v img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover}
+.galeria .h{grid-column:span 2}
+.galeria .h img{width:100%;height:100%;aspect-ratio:3/2;object-fit:cover}
+.galeria figcaption{position:absolute;left:0;bottom:0;background:rgba(43,31,35,.82);color:var(--sobre-oscuro);font-size:.76rem;padding:7px 12px}
+@media (max-width:700px){.galeria{grid-template-columns:repeat(2,minmax(0,1fr))}.galeria .h img{height:auto}.galeria .solo-desk{display:none}}
+
+/* About */
+.nosotros{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:start}
+.nosotros img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 60%}
+.nosotros h2{font-size:clamp(1.9rem,3.8vw,3.1rem);line-height:1.08;margin-block:14px 18px}
+.nosotros .intro{color:var(--suave);font-size:1.06rem;max-width:34em}
+.fundadores{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto auto;column-gap:28px;margin-top:36px}
+.fundador{border-top:2px solid var(--vino);padding-top:16px;display:grid;grid-row:span 3;grid-template-rows:subgrid;align-content:start}
+.fundador .rol{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--laton);font-weight:600}
+.fundador h3{font-size:1.45rem;margin-block:6px 8px;align-self:start}
+.fundador p{color:var(--suave);font-size:.96rem}
+.sello{margin-top:32px;padding:22px 24px;background:var(--papel);display:flex;flex-direction:column;gap:6px}
+.sello b{font-family:var(--display);font-weight:400;font-size:1.35rem;color:var(--vino)}
+.sello span{color:var(--suave);font-size:.95rem}
+@media (max-width:860px){.nosotros{grid-template-columns:1fr}.nosotros img{aspect-ratio:4/3}}
+@media (max-width:520px){.fundadores{grid-template-columns:1fr;row-gap:28px}}
+
+/* Coverage */
+.cobertura-foto{position:relative}
+.cobertura-foto img{width:100%;aspect-ratio:21/8;object-fit:cover;min-height:260px}
+.zonas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--papel);margin-top:-1px}
+.zona{padding:22px clamp(16px,2vw,26px);border-right:1px solid var(--linea)}
+.zona:last-child{border-right:0}
+.zona b{display:block;font-family:var(--display);font-weight:400;font-size:1.35rem;color:var(--vino)}
+.zona span{font-size:.86rem;color:var(--suave)}
+@media (max-width:760px){.zonas{grid-template-columns:repeat(2,minmax(0,1fr))}.zona:nth-child(2){border-right:0}.zona:nth-child(-n+2){border-bottom:1px solid var(--linea)}}
+
+/* Contact */
+.contacto{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:start}
+.contacto h2{font-size:clamp(2.1rem,4.6vw,3.8rem);line-height:1.04;margin-block:14px 20px}
+.contacto .intro{color:var(--sobre-oscuro-suave);font-size:1.06rem;max-width:32em}
+.cotizar{margin-top:30px;border-top:1px solid rgba(242,231,227,.18)}
+.cotizar li{list-style:none;display:grid;grid-template-columns:130px minmax(0,1fr);gap:14px;padding-block:12px;border-bottom:1px solid rgba(242,231,227,.18);font-size:.95rem}
+.cotizar li b{color:var(--laton-claro);font-weight:600;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding-top:3px}
+.cotizar{padding:0;margin-inline:0}
+.canal{border:1px solid rgba(242,231,227,.22);padding:22px 24px;display:flex;flex-direction:column;gap:10px}
+.canal + .canal{margin-top:14px}
+.canal .label{color:var(--laton-claro)}
+.canal .dato{font-family:var(--display);font-size:clamp(1.25rem,2.4vw,1.7rem);color:var(--sobre-oscuro);word-break:break-word;user-select:all}
+.canal .fila{display:flex;flex-wrap:wrap;gap:10px}
+.btn.claro{border-color:rgba(242,231,227,.5);color:var(--sobre-oscuro);background:transparent;padding:9px 16px;font-size:.8rem}
+.btn.claro:hover{background:var(--sobre-oscuro);color:var(--ciruela)}
+.btn.laton{background:var(--laton-claro);border-color:var(--laton-claro);color:var(--ciruela);padding:9px 16px;font-size:.8rem}
+.btn.laton:hover{background:#e0bb7a;border-color:#e0bb7a}
+@media (max-width:860px){.contacto{grid-template-columns:1fr}}
+@media (max-width:460px){.cotizar li{grid-template-columns:1fr;gap:2px}}
+
+footer{background:var(--ciruela);color:var(--sobre-oscuro-suave);font-size:.82rem;padding-block:28px 36px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:center}
+footer b{font-family:var(--display);font-weight:500;font-size:1.05rem;color:var(--sobre-oscuro)}
+
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--papel);color:var(--vino);font-weight:600;font-size:.88rem;padding:10px 18px;box-shadow:0 10px 30px -10px rgba(0,0,0,.4);z-index:60}
+
+/* gentle load */
+@keyframes sube{from{transform:translateY(10px);opacity:.001}to{transform:none;opacity:1}}
+.hero > div:first-child > *{animation:sube .7s cubic-bezier(.2,.7,.2,1) both}
+.hero > div:first-child > *:nth-child(2){animation-delay:.06s}
+.hero > div:first-child > *:nth-child(3){animation-delay:.12s}
+.hero > div:first-child > *:nth-child(4){animation-delay:.18s}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap barra">
+    <a class="marca" href="#inicio" aria-label="Thiele Ilabaca Banquetería, inicio"><b>Thiele Ilabaca</b><span>Banquetería</span></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#celebraciones">Celebraciones y empresas</a>
+      <a href="#temporada">Temporada</a>
+      <a href="#formatos">Formatos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#cobertura">Cobertura</a>
+    </nav>
+    <a class="btn solido" href="#contacto">Conversemos</a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu-panel">Menú</button>
+  </div>
+  <div class="wrap menu-panel" id="menu-panel" hidden>
+    <a href="#celebraciones">Celebraciones y empresas</a>
+    <a href="#temporada">Cocina de temporada</a>
+    <a href="#formatos">Formatos</a>
+    <a href="#caso">Un matrimonio de 250</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Conversemos</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="wrap hero">
+    <div>
+      <p class="label">Banquetería &amp; producción de eventos</p>
+      <h1>Cocina fresca y de temporada. <em>Juntos creamos un menú que se ajuste a tus gustos.</em></h1>
+      <p class="bajada">Producción integral y cocina cuidada al detalle para matrimonios, celebraciones y eventos corporativos de hasta 250 personas, en Santiago, el litoral central, la zona rural y la montaña.</p>
+      <div class="acciones">
+        <a class="btn solido" href="#contacto">Conversemos sobre tu evento</a>
+        <a class="btn linea" href="#formatos">Ver formatos</a>
+      </div>
+      <div class="ficha" role="list">
+        <div role="listitem"><b>250</b><span>invitados, capacidad máxima</span></div>
+        <div role="listitem"><b>3</b><span>formatos de servicio</span></div>
+        <div role="listitem"><b>4</b><span>zonas de cobertura</span></div>
+      </div>
+    </div>
+    <div class="hero-foto">
+      <figure><img src="assets/fundadores-hero.jpg" alt="Kurt Thiele, con chaqueta de chef, y Germán Ilabaca frente a la cordillera" width="1600" height="1200"><figcaption>Kurt Thiele y Germán Ilabaca, fundadores</figcaption></figure>
+      <figure><img src="assets/plato-conejo.jpg" alt="Conejo confitado con puré de papas y betarragas, repollos de Bruselas, cebollas encurtidas y semillas de mostaza" width="1600" height="1066"><figcaption>Conejo confitado con puré de papas y betarragas, repollos de Bruselas, cebollas encurtidas y semillas de mostaza</figcaption></figure>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="mantel"></div>
+
+  <section class="seccion" id="celebraciones">
+    <div class="wrap">
+      <div class="cabeza">
+        <div>
+          <p class="label">Dos públicos, una misma exigencia</p>
+          <h2>Celebraciones y empresas, en la misma mesa</h2>
+        </div>
+        <p>Atendemos celebraciones sociales y eventos corporativos con el mismo equipo y el mismo nivel de detalle. Cambia lo que importa en cada encargo; la manera de trabajar es la misma.</p>
+      </div>
+      <div class="dos-mesas">
+        <article class="mesa">
+          <img loading="lazy" decoding="async" src="assets/baile-detalle.jpg" alt="Detalle de una pareja bailando en la pista, vestido blanco y camisa de lino" width="853" height="580">
+          <div class="cuerpo">
+            <p class="label">Celebraciones</p>
+            <h3>Nos encargamos desde el catering a los demás aspectos de tu evento</h3>
+            <p>Nos hacemos cargo de la cocina, el servicio y el montaje para que la celebración avance a su ritmo, desde la recepción hasta el último baile.</p>
+            <ul class="ocasiones">
+              <li><span>Matrimonios</span></li>
+              <li><span>Aniversarios</span></li>
+              <li><span>Cumpleaños</span></li>
+              <li><span>Celebraciones privadas</span></li>
+            </ul>
+            <a class="btn linea" href="#contacto">Cotizar una celebración</a>
+          </div>
+        </article>
+        <article class="mesa">
+          <img loading="lazy" decoding="async" src="assets/meson.jpg" alt="Mesón de cóctel con bocados individuales, cucharas y copas sobre mantel negro" width="1400" height="781">
+          <div class="cuerpo">
+            <p class="label">Empresas</p>
+            <h3>Eventos corporativos que integran los distintos aspectos de tu evento</h3>
+            <p>Un solo equipo responde por la cocina, el personal, el montaje y los proveedores, con los plazos y la formalidad que exige un evento de empresa.</p>
+            <ul class="ocasiones">
+              <li><span>Fin de año</span></li>
+              <li><span>Employer branding</span></li>
+              <li><span>Lanzamientos</span></li>
+            </ul>
+            <a class="btn linea" href="#contacto">Cotizar un evento de empresa</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion oscuro-bg" id="temporada">
+    <div class="wrap">
+      <div class="cabeza">
+        <div>
+          <p class="label">Filosofía culinaria</p>
+          <h2>El menú lo decidimos juntos, en función de lo que nos ofrece la estación</h2>
+        </div>
+        <p>Cada menú se construye a partir de lo que ofrece la estación en ese momento (verduras, frutas, pescados y productos de mercado) en vez de partir de una carta fija que se repite todo el año. Por eso dos eventos nuestros rara vez comen lo mismo.</p>
+      </div>
+
+      <div class="estaciones" role="tablist" aria-label="Estaciones del año">
+        <button role="tab" id="t-primavera" aria-controls="p-estacion" data-e="primavera"><small>sep · oct · nov · dic</small>Primavera</button>
+        <button role="tab" id="t-verano" aria-controls="p-estacion" data-e="verano"><small>ene · feb</small>Verano</button>
+        <button role="tab" id="t-otono" aria-controls="p-estacion" data-e="otono"><small>mar · abr · may</small>Otoño</button>
+        <button role="tab" id="t-invierno" aria-controls="p-estacion" data-e="invierno"><small>jun · jul · ago</small>Invierno</button>
+      </div>
+      <div class="estacion" id="p-estacion" role="tabpanel" aria-live="polite">
+        <figure class="estacion-foto"><img loading="lazy" decoding="async" src="assets/tabla-flores.jpg" alt="Tabla de quesos, frutillas y flores comestibles sobre mármol, con un ramo de flores de estación" width="1280" height="960"><figcaption>Tabla de primavera: frutillas, quesos y flores comestibles</figcaption></figure>
+        <div>
+          <h3 id="e-titulo">Primavera</h3>
+          <p class="meses" id="e-meses">Septiembre a diciembre</p>
+          <ul class="productos" id="e-lista"></ul>
+          <p class="nota">Referencia de productos de estación en la zona central. El menú de cada evento se define con lo que el mercado ofrece esa semana.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="seccion" id="formatos">
+    <div class="wrap">
+      <div class="cabeza">
+        <div>
+          <p class="label">Formatos de servicio</p>
+          <h2>Tres maneras de sentarse a la mesa</h2>
+        </div>
+        <p>Cada formato se adapta al lugar, al número de invitados y al momento del día. Todos incluyen el mismo equipo de cocina y servicio.</p>
+      </div>
+      <div class="formatos">
+        <article class="formato">
+          <p class="momento">Del desayuno a la cena</p>
+          <h3>Full Day</h3>
+          <p>Jornada completa que acompaña el evento de principio a fin, desde el desayuno o brunch hasta la cena, con distintos momentos de servicio a lo largo del día.</p>
+        </article>
+        <article class="formato">
+          <p class="momento">Noche</p>
+          <h3>Cena</h3>
+          <p>Servicio formal a la mesa o a la parrilla, al fuego, para una celebración nocturna con un montaje cuidado en cada detalle.</p>
+        </article>
+        <article class="formato">
+          <p class="momento">Al aire libre</p>
+          <h3>Almuerzo o asado campestre</h3>
+          <p>Al aire libre, ideal para el litoral central, la zona rural cercana a Santiago o la montaña, con una propuesta relajada pero del mismo nivel.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="mantel"></div>
+
+  <section class="seccion" id="como">
+    <div class="wrap proceso">
+      <div>
+        <p class="label">Cómo trabajamos</p>
+        <h2 style="font-size:clamp(1.9rem,3.8vw,3.1rem);line-height:1.08;margin-block:14px 30px">De la primera conversación al desmontaje</h2>
+        <ol class="pasos">
+          <li><div><h3>Conversamos</h3><p>Nos cuentas el formato, la fecha, el número de invitados y el lugar. Coordinamos una reunión para entender el evento.</p></div></li>
+          <li><div><h3>Armamos la propuesta</h3><p>Diseñamos un menú con productos de la estación y una cotización a medida para ese evento.</p></div></li>
+          <li><div><h3>Producimos el día</h3><p>Llegamos con cocina, personal, vajilla y montaje. Coordinamos a los demás proveedores y desmontamos al final.</p></div></li>
+        </ol>
+      </div>
+      <aside class="incluye">
+        <p class="label">Incluido en cada evento</p>
+        <h3>Lo que llega con nosotros</h3>
+        <ul>
+          <li><b>Personal de cocina y servicio</b><span>Equipo propio, dimensionado según invitados</span></li>
+          <li><b>Vajilla y mantelería</b><span>Montaje completo de mesas y mesones</span></li>
+          <li><b>Montaje y desmontaje</b><span>Llegamos antes y nos vamos después</span></li>
+          <li><b>Coordinación de proveedores</b><span>Una sola contraparte para el día</span></li>
+          <li><b>Barra base</b><span>Servicio de bebestibles durante el evento</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="seccion caso" id="caso">
+    <div class="wrap">
+      <div class="cabeza">
+        <div>
+          <p class="label">Un evento de principio a fin</p>
+          <h2>Un matrimonio para 250 invitados</h2>
+        </div>
+        <p>Mesa de postres, asado al fuego y pista de baile al aire libre. Un mismo equipo resolvió la cocina y la producción del evento completo.</p>
+      </div>
+      <div class="caso-grid">
+        <figure class="c1"><img loading="lazy" decoding="async" src="assets/cintas-pista.jpg" alt="Baile de las cintas en la pista, con esferas espejadas y luces colgando sobre los invitados" width="1280" height="853"><figcaption>Baile de las cintas</figcaption></figure>
+        <figure class="c2"><img loading="lazy" decoding="async" src="assets/chef-asado.jpg" alt="Chef sirviendo carnes, salmón y choclos en la parrilla, con invitados desenfocados al fondo" width="853" height="1280"><figcaption>Asado al fuego</figcaption></figure>
+        <figure class="c3"><img loading="lazy" decoding="async" src="assets/mesa-postres.jpg" alt="Mesa de postres con tortas y flores comestibles" width="853" height="1280" style="object-position:50% 85%"><figcaption>Mesa de postres</figcaption></figure>
+        <figure class="c4"><img loading="lazy" decoding="async" src="assets/luces-pista.jpg" alt="Esferas espejadas y tubos de luz sobre la pista de baile" width="853" height="400"></figure>
+      </div>
+      <div class="caso-datos">
+        <span><b>250</b> invitados</span>
+        <span><b>Al aire libre</b>, con pista de baile</span>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="seccion" id="nosotros">
+    <div class="wrap nosotros">
+      <img loading="lazy" decoding="async" src="assets/fundadores.jpg" alt="Kurt Thiele y Germán Ilabaca en un campo con cerros de fondo" width="1333" height="2000">
+      <div>
+        <p class="label">Nosotros</p>
+        <h2>Cocina y producción, en la misma mesa</h2>
+        <p class="intro">Thiele Ilabaca Banquetería nace de la unión de dos oficios: la cocina y la producción de eventos. Esa combinación es nuestro sello.</p>
+        <div class="fundadores">
+          <div class="fundador">
+            <p class="rol">Chef</p>
+            <h3>Kurt Thiele Vergara</h3>
+            <p>Trayectoria en cocina y administración de restaurantes en Santiago y, durante una temporada, en Lima.</p>
+          </div>
+          <div class="fundador">
+            <p class="rol">Producción</p>
+            <h3>Germán Ilabaca Noguera</h3>
+            <p>Abogado y MBA, se ha desempeñado en la industria del entretenimiento y producción, y de hospitalidad en gastronomía, hotelería y turismo.</p>
+          </div>
+        </div>
+        <div class="sello">
+          <b>Atención boutique</b>
+          <span>Capacidad de producción para 250 personas, con la atención de un evento íntimo.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cobertura">
+    <div class="wrap">
+      <div class="cabeza" style="margin-bottom:28px">
+        <div>
+          <p class="label">Cobertura</p>
+          <h2>Donde sea la celebración</h2>
+        </div>
+        <p>Llevamos la cocina y el montaje completo a la ciudad, la costa, el campo o la cordillera.</p>
+      </div>
+      <div class="cobertura-foto">
+        <img loading="lazy" decoding="async" src="assets/terraza.jpg" alt="Casa de campo con corredores y cordillera nevada entre la niebla" width="1280" height="960">
+      </div>
+      <div class="zonas">
+        <div class="zona"><b>Santiago</b><span>Ciudad y alrededores</span></div>
+        <div class="zona"><b>Litoral central</b><span>Costa cercana</span></div>
+        <div class="zona"><b>Zona rural</b><span>Cercanías de Santiago</span></div>
+        <div class="zona"><b>Montaña</b><span>Santiago y alrededores</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height:clamp(56px,8vw,112px)"></div>
+
+  <section class="seccion oscuro-bg" id="contacto">
+    <div class="wrap contacto">
+      <div>
+        <p class="label">Contacto</p>
+        <h2>Conversemos sobre tu evento</h2>
+        <p class="intro">Cada cotización se arma a medida, según formato, número de invitados y lugar. Escríbenos y coordinamos una reunión.</p>
+        <ul class="cotizar">
+          <li><b>Formato</b><span>Full Day, cena o almuerzo campestre</span></li>
+          <li><b>Fecha</b><span>Aunque sea tentativa</span></li>
+          <li><b>Invitados</b><span>Número aproximado, hasta 250</span></li>
+          <li><b>Lugar</b><span>Dirección o zona, si ya lo tienes</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="canal">
+          <p class="label">Correo</p>
+          <p class="dato" id="correo">contacto@thieleilabaca.com</p>
+          <div class="fila">
+            <button class="btn laton" data-copiar="contacto@thieleilabaca.com">Copiar correo</button>
+            <a class="btn claro" href="mailto:contacto@thieleilabaca.com?subject=Cotizaci%C3%B3n%20de%20evento">Abrir en mi correo</a>
+          </div>
+        </div>
+        <div class="canal">
+          <p class="label">Instagram</p>
+          <p class="dato">@thieleilabacabanqueteria</p>
+          <div class="fila">
+            <a class="btn claro" href="https://www.instagram.com/thieleilabacabanqueteria/" target="_blank" rel="noopener">Ver Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Thiele Ilabaca Banquetería</b>
+    <span>Santiago · Litoral central · Zona rural · Montaña</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+(function(){
+  var E = {
+    primavera:{t:'Primavera', m:'Septiembre a diciembre', img:'img:veloute-flores', alt:'Crema servida en olla individual, terminada con flores frescas',
+      p:['Espárragos','Habas','Arvejas','Alcachofas','Frutillas','Cerezas','Hierbas frescas','Flores comestibles']},
+    verano:{t:'Verano', m:'Enero a febrero', img:'img:gazpacho-marmol', alt:'Gazpacho frío con verduras picadas, sobre mármol',
+      p:['Tomates','Choclo','Porotos granados','Albahaca','Zapallo italiano','Duraznos y damascos','Sandía y melón','Berries']},
+    otono:{t:'Otoño', m:'Marzo a mayo', img:'img:hongos', alt:'Caja de hongos frescos recién cosechados',
+      p:['Hongos','Zapallo','Uvas','Membrillos','Castañas','Nueces','Granadas','Caquis']},
+    invierno:{t:'Invierno', m:'Junio a agosto', img:'img:limones', alt:'Limones sobre el mesón de cocina, junto a un frasco de cítricos en conserva',
+      p:['Limones y naranjas','Mandarinas','Puerros','Coliflor','Brócoli','Acelga','Kiwis','Chirimoyas']}
+  };
+  var order=['verano','verano','otono','otono','otono','invierno','invierno','invierno','primavera','primavera','primavera','primavera'];
+  var actual = order[new Date().getMonth()];
+  var tabs = document.querySelectorAll('.estaciones button');
+  function show(k){
+    var d=E[k];
+    tabs.forEach(function(b){var on=b.dataset.e===k;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;});
+    document.getElementById('p-estacion').setAttribute('aria-labelledby','t-'+k);
+    var t=document.getElementById('e-titulo');
+    t.textContent=d.t;
+    if(k===actual){var s=document.createElement('span');s.className='hoy';s.textContent='Ahora';t.appendChild(s);}
+    document.getElementById('e-meses').textContent=d.m;
+    document.getElementById('e-lista').innerHTML=d.p.map(function(x){return '<li>'+x+'</li>'}).join('');
+  }
+  tabs.forEach(function(b,i){
+    b.addEventListener('click',function(){show(b.dataset.e)});
+    b.addEventListener('keydown',function(e){
+      var n=null;if(e.key==='ArrowRight')n=(i+1)%tabs.length;if(e.key==='ArrowLeft')n=(i-1+tabs.length)%tabs.length;
+      if(n!==null){e.preventDefault();tabs[n].focus();show(tabs[n].dataset.e);}
+    });
+  });
+  show(actual);
+
+  var mb=document.getElementById('menu-btn'), mp=document.getElementById('menu-panel');
+  mb.addEventListener('click',function(){var o=mp.hidden;mp.hidden=!o;mb.setAttribute('aria-expanded',o);mb.textContent=o?'Cerrar':'Menú';});
+  mp.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mp.hidden=true;mb.setAttribute('aria-expanded',false);mb.textContent='Menú';})});
+
+  var toast=document.getElementById('toast'), tt;
+  function avisar(m){toast.textContent=m;toast.hidden=false;clearTimeout(tt);tt=setTimeout(function(){toast.hidden=true},2200);}
+  document.querySelectorAll('[data-copiar]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var v=b.dataset.copiar;
+      function fallback(){var el=document.getElementById('correo');var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);avisar('Correo seleccionado, cópialo con Ctrl+C');}
+      try{navigator.clipboard.writeText(v).then(function(){avisar('Correo copiado')},fallback);}catch(e){fallback();}
+    });
+  });
+})();
+</script>
+</body>
+</html>
